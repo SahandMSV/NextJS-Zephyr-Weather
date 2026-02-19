@@ -1,0 +1,36 @@
+:root {
+  /* Geometry */
+  --btn-border-width: 1px;
+
+  --btn-height-m: 40px;
+  --btn-height-s: 40px;
+
+  --btn-pad-x-m: 0.9rem;
+  --btn-pad-x-s: 0.9rem;
+
+  --btn-border-radius-m: 999px;
+  --btn-border-radius-s: 999px;
+  --btn-border-radius-pill: 999px;
+
+  --overlay-transition: border-color 0.15s ease;
+
+  /* Semantic mapping */
+  --btn-fg: var(--text);
+  --btn-border: var(--border);
+
+  /* Use theme tokens if present */
+  --btn-hover-bg: var(
+    --btn-neutral-hover,
+    color-mix(in srgb, var(--text) 8%, transparent)
+  );
+  --btn-active-bg: var(
+    --btn-neutral-active,
+    color-mix(in srgb, var(--text) 12%, transparent)
+  );
+
+  /* Primary (inverted) */
+  --btn-primary-bg: var(--text);
+  --btn-primary-fg: var(--panel);
+  --btn-primary-hover-bg: color-mix(in srgb, var(--text) 92%, transparent);
+  --btn-primary-active-bg: color-mix(in srgb, var(--text) 86%, transparent);
+}

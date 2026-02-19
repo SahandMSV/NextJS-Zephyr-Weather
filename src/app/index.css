@@ -1,0 +1,20 @@
+@layer reset, tokens, base, utilities;
+
+@layer reset {
+  @import '../styles/vendors/reset.css';
+}
+
+@layer tokens {
+  @import '../styles/tokens/theme.css';
+  @import '../styles/tokens/button-tokens.css';
+}
+
+@layer base {
+  /* @import "./base/layout.css"; */
+  @import '../styles/base/globals.css';
+  @import '../styles/base/typography.css';
+}
+
+@layer utilities {
+  @import '../styles/utilities/helpers.css';
+}

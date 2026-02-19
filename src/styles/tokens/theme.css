@@ -1,0 +1,102 @@
+:root {
+  --bg-primary: #ffffff;
+  --panel: #f4f6f8;
+  --bg-tertiary: #eef1f5;
+
+  --text: #101217;
+  --muted: rgba(16, 18, 23, 0.7);
+  --border: rgba(16, 18, 23, 0.12);
+
+  --btn-neutral-hover: rgba(16, 18, 23, 0.06);
+  --btn-neutral-active: rgba(16, 18, 23, 0.1);
+
+  --transition:
+    background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+
+  /* Aliases used in ThemeSwitcher.tsx */
+  --text-primary: var(--text);
+  --text-secondary: var(--muted);
+  --border-color: var(--border);
+}
+
+/* System dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0f1012;
+    --panel: #17181b;
+    --bg-tertiary: #1d1f23;
+
+    --text: #e6e7ea;
+    --muted: rgba(230, 231, 234, 0.72);
+    --border: rgba(230, 231, 234, 0.14);
+
+    --btn-neutral-hover: rgba(230, 231, 234, 0.08);
+    --btn-neutral-active: rgba(230, 231, 234, 0.12);
+  }
+}
+
+/* Explicit themes */
+html.dark {
+  --bg-primary: #0f1012;
+  --panel: #17181b;
+  --bg-tertiary: #1d1f23;
+
+  --text: #e6e7ea;
+  --muted: rgba(230, 231, 234, 0.72);
+  --border: rgba(230, 231, 234, 0.14);
+
+  --btn-neutral-hover: rgba(230, 231, 234, 0.08);
+  --btn-neutral-active: rgba(230, 231, 234, 0.12);
+
+  --text-primary: var(--text);
+  --text-secondary: var(--muted);
+  --border-color: var(--border);
+}
+
+html.light {
+  --bg-primary: #ffffff;
+  --panel: #f4f6f8;
+  --bg-tertiary: #eef1f5;
+
+  --text: #101217;
+  --muted: rgba(16, 18, 23, 0.7);
+  --border: rgba(16, 18, 23, 0.12);
+
+  --btn-neutral-hover: rgba(16, 18, 23, 0.06);
+  --btn-neutral-active: rgba(16, 18, 23, 0.1);
+
+  --text-primary: var(--text);
+  --text-secondary: var(--muted);
+  --border-color: var(--border);
+}
+
+html.blue {
+  --bg-primary: rgb(10, 13, 26);
+  --panel: rgb(15, 20, 36);
+  --bg-tertiary: rgb(20, 26, 47);
+
+  --text: #e7f0f7;
+  --muted: rgba(231, 240, 247, 0.72);
+  --border: rgba(231, 240, 247, 0.14);
+
+  --btn-neutral-hover: rgba(231, 240, 247, 0.08);
+  --btn-neutral-active: rgba(231, 240, 247, 0.12);
+
+  --text-primary: var(--text);
+  --text-secondary: var(--muted);
+  --border-color: var(--border);
+}
+
+html,
+body {
+  background: var(--bg-primary);
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+  }
+}

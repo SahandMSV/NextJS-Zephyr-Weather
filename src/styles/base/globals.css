@@ -1,0 +1,25 @@
+:root {
+  --theme-ease: 220ms ease;
+}
+
+*,
+*::before,
+*::after {
+  transition-property:
+    background-color, color, border-color, outline-color, box-shadow, fill,
+    stroke;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+  }
+}
+
+body {
+  background-color: var(--bg-primary);
+}
